@@ -1,0 +1,1 @@
+class DesktopMainConsumer : JvmMainApi, CommonMainApi
