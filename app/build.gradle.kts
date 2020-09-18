@@ -17,20 +17,15 @@ kotlin {
     jvm("desktop")
 
     sourceSets {
-        val jvmMain by register("jvmMain")
-        val jvmTest by register("jvmTest")
+        val jvmMain = create("jvmMain") {
+            dependsOn(getByName("commonMain"))
+        }
 
         getByName("desktopMain") {
             dependsOn(jvmMain)
         }
         getByName("androidMain") {
             dependsOn(jvmMain)
-        }
-        getByName("androidTest") {
-            dependsOn(jvmTest)
-        }
-        getByName("androidAndroidTest") {
-            dependsOn(jvmTest)
         }
     }
 }
