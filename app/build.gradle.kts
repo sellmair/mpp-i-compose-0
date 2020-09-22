@@ -27,6 +27,13 @@ kotlin {
         getByName("androidMain") {
             dependsOn(jvmMain)
         }
+
+        all {
+            languageSettings.apply {
+                useExperimentalAnnotation("kotlin.Experimental")
+                useExperimentalAnnotation("kotlin.ExperimentalMultiplatform")
+            }
+        }
     }
 }
 
