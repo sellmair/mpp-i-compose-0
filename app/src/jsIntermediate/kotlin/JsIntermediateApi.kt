@@ -1,0 +1,1 @@
+interface JsIntermediateApi: common.CommonMainApi

@@ -15,9 +15,14 @@ android {
 kotlin {
     android()
     jvm("desktop")
+    js("js")
 
     sourceSets {
         val jvmMain = create("jvmMain") {
+            dependsOn(getByName("commonMain"))
+        }
+
+        val jsIntermediate = create("jsIntermediate") {
             dependsOn(getByName("commonMain"))
         }
 
@@ -26,6 +31,9 @@ kotlin {
         }
         getByName("androidMain") {
             dependsOn(jvmMain)
+        }
+        getByName("jsMain") {
+            dependsOn(jsIntermediate)
         }
 
         all {
