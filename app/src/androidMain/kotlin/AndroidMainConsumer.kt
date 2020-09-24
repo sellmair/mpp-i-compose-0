@@ -1,1 +1,1 @@
-class AndroidMainConsumer : JvmMainApi, CommonMainApi
+class AndroidMainConsumer:  CommonMainApi

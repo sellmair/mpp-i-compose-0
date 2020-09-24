@@ -1,0 +1,1 @@
+class AndroidTestConsumer : JvmMainApi, CommonMainApi, CommonTestApi

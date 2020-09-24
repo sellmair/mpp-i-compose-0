@@ -16,7 +16,7 @@ kotlin {
     android()
     jvm("desktop")
 
-    sourceSets {
+/*    sourceSets {
         val jvmMain = create("jvmMain") {
             dependsOn(getByName("commonMain"))
         }
@@ -24,12 +24,25 @@ kotlin {
         getByName("desktopMain") {
             dependsOn(jvmMain)
         }
+
         getByName("androidMain") {
             dependsOn(jvmMain)
         }
-    }
+    }*/
 }
 
+tasks.register("printSourceSetDependencies") {
+    doLast {
+        val desktopMain = kotlin.sourceSets.getByName("desktopMain")
+        val androidMain = kotlin.sourceSets.getByName("androidMain")
+        val androidDebug = kotlin.sourceSets.getByName("androidDebug")
+        val androidTest = kotlin.sourceSets.getByName("androidTest")
+        logger.quiet("desktopMain=${desktopMain.dependsOn.map { it.name }}")
+        logger.quiet("androidMain=${androidMain.dependsOn.map { it.name }}")
+        logger.quiet("androidDebug=${androidDebug.dependsOn.map { it.name }}")
+        logger.quiet("androidTest=${androidTest.dependsOn.map { it.name }}")
+    }
+}
 
 /*plugins {
     id 'com.android.application'
