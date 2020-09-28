@@ -1,1 +1,5 @@
-interface CommonMainApi
+interface CommonMainApi {
+    fun x() {
+
+    }
+}

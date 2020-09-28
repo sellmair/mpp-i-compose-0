@@ -7,18 +7,6 @@
       <module name="app_desktopMain" target="1.6" />
       <module name="app_desktopTest" target="1.6" />
       <module name="app_jvmMain" target="1.6" />
-      <module name="mpp-compose-0.app.androidAndroidTest" target="1.6" />
-      <module name="mpp-compose-0.app.androidAndroidTestDebug" target="1.6" />
-      <module name="mpp-compose-0.app.androidDebug" target="1.6" />
-      <module name="mpp-compose-0.app.androidDebugAndroidTest" target="1.6" />
-      <module name="mpp-compose-0.app.androidDebugUnitTest" target="1.6" />
-      <module name="mpp-compose-0.app.androidMain" target="1.6" />
-      <module name="mpp-compose-0.app.androidRelease" target="1.6" />
-      <module name="mpp-compose-0.app.androidReleaseUnitTest" target="1.6" />
-      <module name="mpp-compose-0.app.androidTest" target="1.6" />
-      <module name="mpp-compose-0.app.androidTestDebug" target="1.6" />
-      <module name="mpp-compose-0.app.androidTestRelease" target="1.6" />
-      <module name="mpp-compose-0.app.jvmMain" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

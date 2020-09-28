@@ -16,7 +16,24 @@ kotlin {
     android()
     jvm("desktop")
 
-/*    sourceSets {
+    sourceSets {
+        named("commonMain") {
+            dependencies {
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9")
+                implementation("androidx.appcompat:appcompat:1.2.0")
+            }
+        }
+
+        named("commonTest") {
+            dependencies {
+                implementation("junit:junit:4.13")
+            }
+        }
+    }
+
+
+
+    sourceSets {
         val jvmMain = create("jvmMain") {
             dependsOn(getByName("commonMain"))
         }
@@ -28,7 +45,7 @@ kotlin {
         getByName("androidMain") {
             dependsOn(jvmMain)
         }
-    }*/
+    }
 }
 
 tasks.register("printSourceSetDependencies") {
