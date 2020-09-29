@@ -15,25 +15,13 @@ android {
 kotlin {
     android()
     jvm("desktop")
-
     sourceSets {
         named("commonMain") {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9")
-                implementation("androidx.appcompat:appcompat:1.2.0")
+                implementation(project(":lib"))
             }
         }
 
-        named("commonTest") {
-            dependencies {
-                implementation("junit:junit:4.13")
-            }
-        }
-    }
-
-
-
-    sourceSets {
         val jvmMain = create("jvmMain") {
             dependsOn(getByName("commonMain"))
         }
@@ -110,5 +98,4 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
-
  */
