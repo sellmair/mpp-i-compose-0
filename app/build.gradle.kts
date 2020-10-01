@@ -22,6 +22,12 @@ kotlin {
             }
         }
 
+        named("commonTest") {
+            dependencies {
+                implementation(kotlin("test-junit"))
+            }
+        }
+
         val jvmMain = create("jvmMain") {
             dependsOn(getByName("commonMain"))
         }

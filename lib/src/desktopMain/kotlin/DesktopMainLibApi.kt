@@ -1,1 +1,1 @@
-class DesktopMainLibApi 
+interface DesktopMainLibApi

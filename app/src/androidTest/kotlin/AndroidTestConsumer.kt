@@ -1,7 +1,7 @@
 import org.junit.Assert
 import org.junit.Test
 
-class AndroidTestConsumer : JvmMainApi, CommonMainApi, CommonTestApi {
+class AndroidTestConsumer : JvmMainApi, CommonMainApi, CommonTestApi /* TODO NOW, DesktopTestLibApi */ {
 
     @Test
     fun testMe() {
